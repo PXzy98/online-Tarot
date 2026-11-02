@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "siteName": "静观",
+    "siteNameFull": "静观塔罗",
+    "tagline": "安静地抽一张牌",
+    "description": "静观是一个免费的塔罗占卜网站：无需注册，选择牌阵、洗牌、抽牌，即可查看完整的牌义与牌阵解读。"
+  },
+  "a11y": {
+    "skipToContent": "跳到主要内容",
+    "primaryNav": "主导航",
+    "footerNav": "页脚导航"
+  },
+  "nav": {
+    "home": "首页",
+    "reading": "占卜",
+    "daily": "每日一牌",
+    "cards": "牌库",
+    "spreads": "牌阵",
+    "history": "历史",
+    "guide": "指南",
+    "about": "关于",
+    "privacy": "隐私",
+    "support": "支持静观"
+  },
+  "language": {
+    "label": "语言",
+    "switchTo": "切换到{language}"
+  },
+  "footer": {
+    "disclaimer": "塔罗解读仅供娱乐参考，不构成医疗、法律、财务或其他专业建议。",
+    "free": "永久免费，无需注册。"
+  },
+  "home": {
+    "eyebrow": "Rider–Waite–Smith · 78 张",
+    "title": "静观",
+    "subtitle": "选一个牌阵，洗牌，从 78 张牌中亲手抽取，查看每张牌与整个牌阵的解读。",
+    "start": "开始占卜",
+    "daily": "今日一牌",
+    "browseCards": "浏览牌库",
+    "spreads": "了解牌阵",
+    "stepsTitle": "三步完成一次占卜",
+    "steps": {
+      "ask": {
+        "title": "提问",
+        "body": "选择问题类型，写下你的问题，或者直接开始。"
+      },
+      "draw": {
+        "title": "抽牌",
+        "body": "洗牌后从完整的 78 张牌中选出你的牌。"
+      },
+      "read": {
+        "title": "解读",
+        "body": "查看每张牌的位置含义，以及牌与牌之间的联系。"
+      }
+    }
+  },
+  "pages": {
+    "reading": { "title": "占卜", "description": "选择问题类型与牌阵，洗牌并从 78 张牌中抽牌。" },
+    "result": { "title": "占卜结果", "description": "本次占卜的牌阵与解读。" },
+    "daily": { "title": "每日一牌", "description": "每天为你抽一张牌，同一天内保持不变。" },
+    "cards": { "title": "塔罗牌库", "description": "Rider–Waite–Smith 体系全部 78 张牌的牌义：大阿尔卡那与四个花色的小阿尔卡那。" },
+    "spreads": { "title": "牌阵", "description": "单张牌、过去—现在—未来、现状—障碍—建议三种牌阵的用法。" },
+    "history": { "title": "历史记录", "description": "保存在本机浏览器中的占卜记录。" },
+    "guide": { "title": "塔罗入门", "description": "塔罗牌的结构、正逆位、如何提问以及如何阅读牌阵。" },
+    "about": { "title": "关于静观", "description": "静观是一个免费、无需注册的塔罗网站。" },
+    "privacy": { "title": "隐私说明", "description": "静观如何处理你的问题与占卜记录。" },
+    "support": { "title": "支持静观", "description": "静观永久免费。如果你愿意，可以自愿赞助网站的运营。" }
+  },
+  "placeholder": {
+    "note": "这个页面正在建设中，很快就会上线。",
+    "backHome": "返回首页"
+  },
+  "root": {
+    "redirecting": "正在为你打开合适的语言版本……",
+    "choose": "选择语言"
+  },
+  "notFound": {
+    "title": "找不到这个页面",
+    "body": "你访问的页面不存在，或已经移动。",
+    "backHome": "返回首页"
+  }
+}

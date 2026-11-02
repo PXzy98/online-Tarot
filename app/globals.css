@@ -1,0 +1,89 @@
+@import 'tailwindcss';
+
+/*
+ * Design tokens — docs/spec/03-UX-DESIGN.md §2.
+ * Contrast (WCAG 2.2): fg/bg 15.9:1 · fg-muted/bg 6.6:1 · accent/bg 10.0:1 · bg-on-accent 10.0:1.
+ * accent-deep is decorative only (2.7:1) and must never carry text.
+ */
+@theme {
+  --color-bg: #101321;
+  --color-bg-elevated: #1a1b2e;
+  --color-bg-raised: #22243a;
+  --color-fg: #f3ede2;
+  --color-fg-muted: #a39cb8;
+  --color-accent: #d8bb82;
+  --color-accent-deep: #68517f;
+  --color-line: #2e2f48;
+
+  --font-sans:
+    ui-sans-serif, system-ui, -apple-system, 'Segoe UI', 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', 'Noto Sans CJK SC', 'Noto Sans SC', sans-serif;
+  --font-display:
+    'Cormorant Garamond', 'Songti SC', 'STSong', 'Noto Serif CJK SC', 'Noto Serif SC',
+    'Source Han Serif SC', Georgia, serif;
+
+  --radius-card: 0.75rem;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-bg);
+    color: var(--color-fg);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.7;
+    min-height: 100dvh;
+    text-rendering: optimizeLegibility;
+  }
+
+  :lang(en) body,
+  body:lang(en) {
+    line-height: 1.6;
+  }
+
+  @media (min-width: 1024px) {
+    body {
+      font-size: 1.0625rem;
+    }
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 500;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+
+  ::selection {
+    background-color: var(--color-accent-deep);
+    color: var(--color-fg);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

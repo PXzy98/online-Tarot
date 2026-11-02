@@ -1,0 +1,82 @@
+{
+  "meta": {
+    "siteName": "Still",
+    "siteNameFull": "Still Tarot",
+    "tagline": "Draw a card, quietly",
+    "description": "Still is a free tarot reading site. No sign-up: choose a spread, shuffle, draw your cards and read the full card meanings and spread interpretation."
+  },
+  "a11y": {
+    "skipToContent": "Skip to main content",
+    "primaryNav": "Primary navigation",
+    "footerNav": "Footer navigation"
+  },
+  "nav": {
+    "home": "Home",
+    "reading": "Reading",
+    "daily": "Daily card",
+    "cards": "Cards",
+    "spreads": "Spreads",
+    "history": "History",
+    "guide": "Guide",
+    "about": "About",
+    "privacy": "Privacy",
+    "support": "Support Still"
+  },
+  "language": {
+    "label": "Language",
+    "switchTo": "Switch to {language}"
+  },
+  "footer": {
+    "disclaimer": "Tarot readings are for entertainment only and are not medical, legal, financial or other professional advice.",
+    "free": "Free forever. No sign-up."
+  },
+  "home": {
+    "eyebrow": "Rider–Waite–Smith · 78 cards",
+    "title": "Still",
+    "subtitle": "Pick a spread, shuffle, draw by hand from all 78 cards, and read what each card and the whole spread are saying.",
+    "start": "Start a reading",
+    "daily": "Today's card",
+    "browseCards": "Browse the cards",
+    "spreads": "About spreads",
+    "stepsTitle": "A reading in three steps",
+    "steps": {
+      "ask": {
+        "title": "Ask",
+        "body": "Choose a topic, write your question, or just begin."
+      },
+      "draw": {
+        "title": "Draw",
+        "body": "Shuffle, then pick your cards from the full deck of 78."
+      },
+      "read": {
+        "title": "Read",
+        "body": "See what each card means in its position and how the cards connect."
+      }
+    }
+  },
+  "pages": {
+    "reading": { "title": "Reading", "description": "Choose a topic and a spread, shuffle, and draw from all 78 cards." },
+    "result": { "title": "Your reading", "description": "The spread and interpretation for this reading." },
+    "daily": { "title": "Daily card", "description": "One card for you each day, unchanged until tomorrow." },
+    "cards": { "title": "Tarot card meanings", "description": "All 78 Rider–Waite–Smith cards: the Major Arcana and the four suits of the Minor Arcana." },
+    "spreads": { "title": "Spreads", "description": "How to use the single-card, past–present–future and situation–challenge–advice spreads." },
+    "history": { "title": "History", "description": "Readings saved in this browser." },
+    "guide": { "title": "Tarot guide", "description": "How the deck is structured, reversals, asking questions and reading a spread." },
+    "about": { "title": "About Still", "description": "Still is a free tarot site with no sign-up." },
+    "privacy": { "title": "Privacy", "description": "How Still handles your questions and readings." },
+    "support": { "title": "Support Still", "description": "Still is free forever. If you like, you can chip in toward running it." }
+  },
+  "placeholder": {
+    "note": "This page is under construction and will be available soon.",
+    "backHome": "Back to home"
+  },
+  "root": {
+    "redirecting": "Opening the right language for you…",
+    "choose": "Choose a language"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "body": "The page you're looking for doesn't exist or has moved.",
+    "backHome": "Back to home"
+  }
+}

@@ -24,6 +24,16 @@
 | D-018 | 统计默认关闭，可选 Cloudflare Web Analytics | 隐私优先 | 07 §6 |
 | D-019 | v1 就提供“仅正位”开关 | 实现成本几乎为零，对新手友好 | — |
 | D-020 | 不设财务类问题类型 | 降低风险面 | 安全层仍会识别财务话题并追加提示 |
+| D-021 | CSP 的 `script-src` 包含 `'unsafe-inline'` | Next.js 静态导出把每页的 RSC 数据写成内联 `<script>`，内容逐页不同，无法用 nonce（需要服务器）或维护哈希列表 | 其余指令保持严格：`default-src 'self'`、`object-src 'none'`、`frame-ancestors 'none'`。用户输入一律以文本渲染（ESLint 强制），XSS 风险由此控制 |
+| D-022 | P1 实际版本：Next.js 16.4.4、React 19.3.1、next-intl 4.14.9、Tailwind 4.3.3、motion 14.9.0、zod 4.6.7、Vitest 5.1.0、Playwright 1.63.0、wrangler 4.156.2 | 安装时的最新稳定版，`.npmrc` 设置 `save-exact` 锁定 | 升级时运行 `pnpm check` 全部通过后再提交 |
+| D-023 | TypeScript 用 5.9.3，而不是最新的 7.x | 7.x 是 Go 重写版，typescript-eslint 和 Next.js 工具链依赖的 JS API 尚未就绪 | 工具链支持后再升级 |
+| D-024 | ESLint 用 9.39.5，而不是 10.x | eslint-config-next 依赖的 react、jsx-a11y、import 插件尚未声明支持 ESLint 10 | 插件支持后再升级 |
+| D-025 | @playwright/test 固定为 1.63.0 | 与开发容器预装的 Chromium 版本一致；CI 中通过 `playwright install` 安装同版本浏览器 | 升级时同步升级浏览器 |
+| D-026 | 多根布局：`app/(root)` 与 `app/[locale]`；404 使用 `global-not-found.tsx`（实验特性 `experimental.globalNotFound`） | 根路径需要独立的极简布局；没有统一根布局时，Next.js 文档推荐用 global-not-found 处理全局 404 | 如果该实验特性被移除，改为在 `[locale]` 下提供 not-found，并在托管端把未知路径指向 `/zh/404` |
+| D-027 | 英文标题字体 Cormorant Garamond 通过 `@fontsource` 包自托管，只加载 latin 500 | 构建时不依赖 Google Fonts 网络请求，运行时不请求第三方 | — |
+| D-028 | 根路径分流用客户端脚本，不支持 JS 时显示语言链接 | 静态导出不能读取 Accept-Language；Cloudflare 免费的 `_redirects` 也不能按语言跳转 | 将来如果需要无闪烁分流，可以加一个极小的 Worker 脚本（会增加少量请求计费） |
+| D-029 | 本地 E2E 使用自写的 `scripts/serve-out.ts`，模拟 Cloudflare 的尾斜杠、404 和 `_headers` | E2E 能在真实 CSP 下验证页面，不额外引入依赖 | — |
+| D-030 | 免责声明只放在页脚（每页都有），首页不再重复 | 同一屏出现两次显得冗余 | 修改 `messages/*.json` 中的 `footer.disclaimer` |
 
 ## 待你拍板
 

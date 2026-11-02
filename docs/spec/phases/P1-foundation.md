@@ -10,7 +10,7 @@
 
 - 初始化 Next.js、TypeScript strict、Tailwind v4、shadcn/ui、motion、next-intl、zod、Vitest、fast-check、Playwright、axe。用 pnpm 锁定版本。
 - `next.config`：静态导出相关配置（02 §2）。
-- 路由骨架：`(root)` 语言分流页 + `[locale]` 根布局；所有页面先建空壳，标题和导航可用，内容写“即将推出”**仅限开发模式**，生产构建检查会拦截。
+- 路由骨架：`(root)` 语言分流页 + `[locale]` 根布局；所有页面先建空壳，标题和导航可用，内容写“正在建设中”。空壳页面带 `data-placeholder` 标记：`pnpm verify:export` 会列出警告，`VERIFY_STRICT=1`（正式发布）时直接失败。
 - `i18n/config.ts`、`messages/zh.json`、`messages/en.json`；Header 中的语言切换器（保留路径和查询参数）。
 - 设计 Token、字体方案、基础布局（Header、Footer 含免责声明和赞助链接、跳转到主内容链接）。
 - `lib/site/site.config.ts` 骨架和各 provider 接口的类型定义（07）。

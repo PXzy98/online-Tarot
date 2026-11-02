@@ -1,0 +1,12 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  // Static-assets-only Worker: no server code, serves the Next.js export in ./out.
+  // See docs/spec/02-ARCHITECTURE.md §9 and README "Deploy".
+  "name": "still-tarot",
+  "compatibility_date": "2026-10-01",
+  "assets": {
+    "directory": "./out",
+    "not_found_handling": "404-page",
+    "html_handling": "auto-trailing-slash"
+  }
+}

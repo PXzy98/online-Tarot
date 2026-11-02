@@ -192,7 +192,7 @@ type ReadingRecord = {
 - 主方案：**Cloudflare Workers Static Assets**（`wrangler.jsonc`：`assets.directory = "./out"`、`not_found_handling = "404-page"`、`html_handling = "auto-trailing-slash"`）。免费计划下，纯静态资源请求不计费（以 Cloudflare 当前定价页为准）。
 - 等价备选：Cloudflare Pages（免费计划）、GitHub Pages、Netlify。产物是纯 `out/` 目录，可以在这些平台之间迁移。
 - 构建：GitHub Actions（公开仓库免费）运行检查 → 构建 → `wrangler deploy`；也可以直接使用 Cloudflare 的 Git 集成构建。部署需要的 API Token 只存在 CI Secret 中，不进入仓库或前端。
-- 安全头：通过 `public/_headers` 下发 CSP、`X-Content-Type-Options`、`Referrer-Policy: strict-origin-when-cross-origin`、`Permissions-Policy`。CSP 默认 `default-src 'self'`，只有启用统计时才按 provider 放行对应域名（见 07 §6）。
+- 安全头：通过 `public/_headers` 下发 CSP、`X-Content-Type-Options`、`Referrer-Policy: strict-origin-when-cross-origin`、`Permissions-Policy`。CSP 默认 `default-src 'self'`，只有启用统计时才按 provider 放行对应域名（见 07 §6）。`script-src` 需要 `'unsafe-inline'`，因为 Next.js 静态导出会把每页的 RSC 数据写成内联脚本（D-021）。
 - 成本项：域名约每年 ¥70–100（可选；不买域名也能使用平台的免费子域名）。
 
 > ⚠️ **中国大陆访问**：Cloudflare 免费计划在大陆没有节点，访问可能较慢；平台默认子域名（`*.pages.dev`、`*.workers.dev`）在大陆经常无法访问。如果大陆用户是重点人群，**至少要绑定自有域名**。真正的大陆加速需要 ICP 备案和境内托管，会产生成本，不在 v1 范围内，记录在 DECISIONS.md D-010。
