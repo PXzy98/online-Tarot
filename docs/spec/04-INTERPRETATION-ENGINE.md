@@ -52,7 +52,7 @@ type Element = 'fire' | 'water' | 'air' | 'earth';
 | `contexts.{category}` | 五个问题类型下的完整段落，`general` 使用 `meaning` |
 | `positionHints.{role}` | 这张牌出现在某类位置时的一句专属提示（见 §2.4），可选但强烈建议提供 |
 | `advice` | 1–2 条可执行的建议 |
-| `questions` | 2 个反思问题 |
+| `questions` | 2 个延伸问题 |
 | `themes` | 2–4 个主题标签，来自受控词表（§2.5） |
 | `reversedMode` | 仅逆位：这张牌逆位时能量变化的主要方式（§2.6） |
 
@@ -176,7 +176,7 @@ interface SpreadStrategy {
 - **逐张**：位置行使用 `positionHints.focus`，正文使用 `contexts[category]`。
 - **联系段**：单张牌没有牌与牌的关系，改为输出“这张牌与你的问题类型”段（`category.bridge.{category}`），加上逆位时的 `reversedMode` 说明，或大阿尔卡那 / 宫廷牌的身份说明（如果适用）。
 - **建议**：牌的 `advice`，加 1 条类型通用建议（`advice.category.{category}`）。
-- **反思问题**：牌的 `questions`，加 1 个类型问题。
+- **延伸问题**：牌的 `questions`，加 1 个类型问题。
 
 ### 5.2 `past-present-future` 过去—现在—未来
 
@@ -188,7 +188,7 @@ interface SpreadStrategy {
   2. **现在 → 未来**：`dignity.pair(present, future)` 加上 `orientation.position(future)`。如果“未来”位置是逆位，结合 `reversedMode` 表述为“这个方向还没有成形 / 需要调整”，而不是“坏结局”。
   3. 全局信号中最显著的一个：`major.density` / `element.dominant` / `number.repeat` / `theme.shared` / `major.sequence`（优先级依次递减）。
 - **建议**：现在位置牌的 `advice`（“此刻能做的”）；再加一句由“现在→未来”关系生成的建议，例如“希望延续就……，不希望这样发展就……”。
-- **反思问题**：一个关于过去的问题（“哪些经历仍在影响你”）、现在位置牌的 `questions[0]`、一个关于未来的问题（“你希望改变哪一部分走向”）。
+- **延伸问题**：一个关于过去的问题（“哪些经历仍在影响你”）、现在位置牌的 `questions[0]`、一个关于未来的问题（“你希望改变哪一部分走向”）。
 
 ### 5.3 `situation-challenge-advice` 现状—障碍—建议
 
@@ -203,7 +203,7 @@ interface SpreadStrategy {
   2. **现状 → 障碍**：元素关系加主题呼应，说明阻力从何而来（“阻力就长在现状里” vs “阻力来自外部的另一股力量”）。
   3. 全局信号中最显著的一个（同 5.2）。
 - **建议**：建议位置牌的 `advice`（结合问题类型）+ 一条由“障碍×建议”元素对生成的行动建议 +（如果有宫廷牌）一句人际相关的提示。
-- **反思问题**：障碍位置牌的 `questions[0]` + 建议位置牌的 `questions[0]` + 一个元素对问题（`pair.{a}.{b}.question`）。
+- **延伸问题**：障碍位置牌的 `questions[0]` + 建议位置牌的 `questions[0]` + 一个元素对问题（`pair.{a}.{b}.question`）。
 
 ### 5.4 新增牌阵
 

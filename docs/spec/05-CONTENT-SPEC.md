@@ -43,7 +43,7 @@ upright:
     challenge: …
     advice: …
   advice: [ …, … ]               # 1–2 条，具体可执行
-  questions: [ …, … ]            # 2 个反思问题，开放式
+  questions: [ …, … ]            # 2 个延伸问题，开放式
   themes: [effort, freedom]      # 2–4 个，来自 04 §2.5 的受控词表
 reversed:
   # 结构与 upright 相同，另加：
@@ -60,7 +60,7 @@ reversed:
 | `symbols` | 解释象征物的传统含义，不要编造出处 |
 | `essence` | **引擎串联的核心材料**。必须能嵌入“眼下的议题围绕___”“from ___ toward ___”这类句子。英文用小写开头并带冠词或限定词（“a restless urge to prove yourself”） |
 | `meaning` | 先讲核心含义，再讲可能的表现，最后讲值得留意的地方 |
-| `contexts.*` | 写这个领域里**具体可能的样子**，并给出一个反思角度。不做预言（不写“你会遇到某个人”），而是写“可能表现为……” |
+| `contexts.*` | 写这个领域里**具体可能的样子**，并给出一个思考角度。不做预言（不写“你会遇到某个人”），而是写“可能表现为……” |
 | `positionHints.future` | 只能写“如果延续当前方向，可能……” |
 | `positionHints.challenge` | 指出阻力的形态，不指责用户 |
 | `positionHints.advice` | 把这张牌当作一种可以采取的姿态或行动 |

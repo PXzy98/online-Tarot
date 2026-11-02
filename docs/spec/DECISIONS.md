@@ -4,7 +4,7 @@
 
 | # | 决策 | 理由 | 备选 / 更换方式 |
 |---|---|---|---|
-| D-001 | 产品名：静观 / Still Tarot | 契合“自我反思”的定位，避免“Free / Web”这类功能性命名 | 名称集中在 `messages/*.json` 与 `site.config.ts` 中，更换只改这两处 |
+| D-001 | 产品名：静观 / Still Tarot | 气质安静克制，避免“Free / Web”这类功能性命名 | 名称集中在 `messages/*.json` 与 `site.config.ts` 中，更换只改这两处 |
 | D-002 | Next.js App Router + 静态导出 | 你已指定；生态成熟，SSG 适合 78 个详情页 | Astro 的客户端 JS 更少；目前不更换 |
 | D-003 | 部署到 Cloudflare Workers Static Assets（Pages 作为等价备选） | 免费计划下静态请求不计费，除域名外零成本 | 产物是纯静态的 `out/`，可迁移到 Pages、GitHub Pages、Netlify |
 | D-004 | 多语言：URL 前缀 `/{locale}/`，根路径做客户端分流 | 静态导出不能用 middleware；URL 前缀对 SEO 最友好 | 新增语言见 02 §3.2 |
